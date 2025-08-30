@@ -8,6 +8,12 @@ menuButton.addEventListener('click', () => {
 })
 
 
+window.addEventListener('load', () => { 
+  baguetteBox.run('.gallery', {
+    buttons: true
+  })
+});
+
 
 
 const swiper = new Swiper('.swiper', {

@@ -4,6 +4,9 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.12.0/baguetteBox.min.css"
+    integrity="sha512-1hit2XBKwGtoT792KMYEhLYTk+eYYATgFqSkftn4dG8/7TA0ysVRCBIYzhe+IRd9XPi2l8pceoKlV+Oa/B+PDA=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
   <link rel="stylesheet" href="assets/css/styles.css">
   <title>Gregorio Peña</title>
@@ -17,9 +20,9 @@
         class="hamburger-icon"></span></button>
     <nav>
       <ul class="list-links">
-        <li><a href="#" class="nav-link">Sobre mi</a></li>
-        <li><a href="#" class="nav-link">Mis obras</a></li>
-        <li><a href="#" class="nav-link">Contacto</a></li>
+        <li><a href="#about" class="nav-link">Sobre mi</a></li>
+        <li><a href="#projects" class="nav-link">Mis obras</a></li>
+        <li><a href="#contact" class="nav-link">Contacto</a></li>
       </ul>
     </nav>
   </header>
@@ -53,49 +56,53 @@
       </div>
 
     </section>
-    <section class="main-content">
+    <div class="main-content">
 
-    <section class="about">
-      <h2>Sobre mi</h2>
-      <img src="assets/images/pintor.jpg" alt="pintor" class="about-image">
+      <section class="about" id="about">
+        <h2>Sobre mi</h2>
+        <img src="assets/images/pintor.jpg" alt="pintor" class="about-image">
 
-      <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quaerat neque explicabo facere cum corrupti, eaque
-        suscipit amet iure exercitationem incidunt ad culpa molestias temporibus possimus dolorum odit placeat beatae
-        tempore.
-        Accusantium sapiente voluptatum dicta dolorum harum? Illum ab beatae officia quibusdam molestiae voluptatum!
-        Ducimus cumque, totam tenetur ipsam debitis, dolorum alias, sint blanditiis pariatur culpa deleniti voluptas
-        perspiciatis. Quam, asperiores?</p>
-    </section>
-    <section class="projects">
-      <h2>Mis Obras</h2>
-      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio incidunt voluptatibus ratione vero, quod quidem
-        dolore nesciunt veritatis. Perferendis, incidunt cumque maiores ad dignissimos velit natus repellat sapiente
-        ipsam
-        libero?</p>
-      <section class="gallery">
-        <a href="assets/images/picture1.jpg"><img src="assets/images/picture1.jpg" alt=""></a>
-        <a href="assets/images/picture2.jpg"><img src="assets/images/picture2.jpg" alt=""></a>
-        <a href="assets/images/picture3.jpg"><img src="assets/images/picture3.jpg" alt=""></a>
-        <a href="assets/images/picture4.jpg"><img src="assets/images/picture4.jpg" alt=""></a>
-        <a href="assets/images/picture5.jpg"><img src="assets/images/picture5.jpg" alt=""></a>
-        <a href="assets/images/picture6.jpg"><img src="assets/images/picture6.jpg" alt=""></a>
-        <a href="assets/images/picture7.jpg"><img src="assets/images/picture7.jpg" alt=""></a>
-        <a href="assets/images/picture8.jpg"><img src="assets/images/picture8.jpg" alt=""></a>
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quaerat neque explicabo facere cum corrupti, eaque
+          suscipit amet iure exercitationem incidunt ad culpa molestias temporibus possimus dolorum odit placeat beatae
+          tempore.
+          Accusantium sapiente voluptatum dicta dolorum harum? Illum ab beatae officia quibusdam molestiae voluptatum!
+          Ducimus cumque, totam tenetur ipsam debitis, dolorum alias, sint blanditiis pariatur culpa deleniti voluptas
+          perspiciatis. Quam, asperiores?</p>
       </section>
-    </section>
-</section>
-    <section class="contact">
+      <section class="projects" id="projects">
+        <h2>Mis Obras</h2>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio incidunt voluptatibus ratione vero, quod
+          quidem
+          dolore nesciunt veritatis. Perferendis, incidunt cumque maiores ad dignissimos velit natus repellat sapiente
+          ipsam
+          libero?</p>
+          <p>(Toca la imagen para ver la galería.)</p>
+        <section class="gallery">
+          <a href="assets/images/picture1.jpg" data-caption="Cuadro al óleo, 90x40"><img src="assets/images/picture1.jpg" alt=""></a>
+          <a href="assets/images/picture2.jpg" data-caption=""><img src="assets/images/picture2.jpg" alt=""></a>
+          <a href="assets/images/picture3.jpg"><img src="assets/images/picture3.jpg" alt=""></a>
+          <a href="assets/images/picture4.jpg" data-caption="Dibujo en carboncillo"><img src="assets/images/picture4.jpg" alt=""></a>
+          <a href="assets/images/picture5.jpg" data-caption="Paisaje en acuarela"><img src="assets/images/picture5.jpg" alt=""></a>
+          <a href="assets/images/picture6.jpg"><img src="assets/images/picture6.jpg" alt=""></a>
+          <a href="assets/images/picture7.jpg"><img src="assets/images/picture7.jpg" alt=""></a>
+          <a href="assets/images/picture8.jpg"><img src="assets/images/picture8.jpg" alt=""></a>
+        </section>
+      </section>
+      </section>
+    </div>
+    <section class="contact" id="contact">
       <h2>Contacto</h2>
-      <form action="">
+      <form action="" class="form-contact">
         <label for="name">Nombre</label>
         <input type="text" id="name">
         <label for="email">Email</label>
         <input type="email" id="email">
         <label for="message">Mensaje</label>
         <textarea name="message" id="message"></textarea>
+        <button type="submit">Enviar</button>
 
       </form>
-    </section>
+
   </main>
 
 
@@ -103,7 +110,9 @@
     <p>Gregorio Peña &copy; 2025. Todos los derechos reservados.</p>
     <p>Desarrollo Web: RamirezJM</p>
   </footer>
-
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.12.0/baguetteBox.min.js"
+    integrity="sha512-HzIuiABxntLbBS8ClRa7drXZI3cqvkAZ5DD0JCAkmRwUtykSGqzA9uItHivDhRUYnW3MMyY5xqk7qVUHOEMbMA=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
   <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
   <script src="assets/js/script.js"></script>
 </body>
