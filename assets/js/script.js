@@ -37,3 +37,16 @@ const swiper = new Swiper('.swiper', {
 
 });
 
+const calendar = document.getElementById('calendar')
+
+const fecha = new Date()
+const options = {
+  year: 'numeric',
+  month: 'long'
+}
+const nuevafecha = fecha.toLocaleDateString('es-CL', options)
+
+const anno = fecha.getFullYear()
+const month = (fecha.getMonth()+1).toString().padStart(2, '0')
+ calendar.innerText = nuevafecha
+ calendar.setAttribute('datetime', `${month}-${anno}`)
