@@ -46,7 +46,8 @@ const options = {
 }
 const nuevafecha = fecha.toLocaleDateString('es-CL', options)
 
+
 const anno = fecha.getFullYear()
 const month = (fecha.getMonth()+1).toString().padStart(2, '0')
- calendar.innerText = nuevafecha
+ calendar.innerText = nuevafecha.at(0).toUpperCase() + nuevafecha.slice(1)
  calendar.setAttribute('datetime', `${month}-${anno}`)

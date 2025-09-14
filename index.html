@@ -17,112 +17,117 @@
 
 <body>
   <div class="wrapper">
-  <header>
-    <h1>
-      <span class="name">Gregorio Peña</span>
-      <span class="career">Artista Plástico</span>
-    </h1>
-    
-    <p class="current-date">
-      <time datetime="" id="calendar"></time>
-    </p>
-    <button class="hamburger-menu" aria-expanded="false" aria-label="toggle navigation"><span
-        class="hamburger-icon"></span></button>
-    <nav>
-      <ul class="list-links">
-        <li><a href="#about" class="nav-link">Sobre mi</a></li>
-        <li><a href="#projects" class="nav-link">Mis obras</a></li>
-        <li><a href="#contact" class="nav-link">Contacto</a></li>
-      </ul>
-    </nav>
-  </header>
+    <header>
+      <div class="main-title">
+        <img src="assets/images/logoNY.png" alt="logo" class="logo">
+        <h1>
+          <span class="name">Gregorio Peña</span>
+          <span class="career">Artista Plástico</span>
+        </h1>
+
+        <p class="current-date">
+          <time datetime="" id="calendar"></time>
+        </p>
+      </div>
+      <button class="hamburger-menu" aria-expanded="false" aria-label="toggle navigation"><span
+          class="hamburger-icon"></span></button>
+      <nav>
+        <ul class="list-links">
+          <li><a href="#about" class="nav-link">Sobre mi</a></li>
+          <li><a href="#projects" class="nav-link">Mis obras</a></li>
+          <li><a href="#contact" class="nav-link">Contacto</a></li>
+        </ul>
+      </nav>
+    </header>
 
 
-  <main>
-    <section class="hero">
-      <!-- Slider main container -->
-      <div class="swiper">
-        <!-- Additional required wrapper -->
-        <div class="swiper-wrapper">
-          <!-- Slides -->
-          <div class="swiper-slide">
-            <img src="assets/images/slide1.jpg" alt="">
+    <main>
+      <section class="hero">
+        <!-- Slider main container -->
+        <div class="swiper">
+          <!-- Additional required wrapper -->
+          <div class="swiper-wrapper">
+            <!-- Slides -->
+            <div class="swiper-slide">
+              <img src="assets/images/slide1.jpg" alt="">
+            </div>
+            <div class="swiper-slide">
+              <img src="assets/images/slide2.jpg" alt="">
+            </div>
+            <div class="swiper-slide">
+              <img src="assets/images/slide3.jpg" alt="">
+            </div>
+
           </div>
-          <div class="swiper-slide">
-            <img src="assets/images/slide2.jpg" alt="">
-          </div>
-          <div class="swiper-slide">
-            <img src="assets/images/slide3.jpg" alt="">
-          </div>
+          <!-- If we need pagination -->
+          <div class="swiper-pagination"></div>
+
+          <!-- If we need navigation buttons -->
+          <div class="swiper-button-prev"></div>
+          <div class="swiper-button-next"></div>
 
         </div>
-        <!-- If we need pagination -->
-        <div class="swiper-pagination"></div>
 
-        <!-- If we need navigation buttons -->
-        <div class="swiper-button-prev"></div>
-        <div class="swiper-button-next"></div>
-
-      </div>
-
-    </section>
-    <div class="main-content">
-
-      <section class="about" id="about">
-        <h2>Sobre mi</h2>
-        <img src="assets/images/pintor.jpg" alt="pintor" class="about-image">
-
-        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quaerat neque explicabo facere cum corrupti, eaque
-          suscipit amet iure exercitationem incidunt ad culpa molestias temporibus possimus dolorum odit placeat beatae
-          tempore.
-          Accusantium sapiente voluptatum dicta dolorum harum? Illum ab beatae officia quibusdam molestiae voluptatum!
-          Ducimus cumque, totam tenetur ipsam debitis, dolorum alias, sint blanditiis pariatur culpa deleniti voluptas
-          perspiciatis. Quam, asperiores?</p>
       </section>
-      <section class="projects" id="projects">
-        <h2>Mis Obras</h2>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio incidunt voluptatibus ratione vero, quod
-          quidem
-          dolore nesciunt veritatis. Perferendis, incidunt cumque maiores ad dignissimos velit natus repellat sapiente
-          ipsam
-          libero?</p>
-        <p>(Toca la imagen para ver la galería.)</p>
-        <section class="gallery">
-          <a href="assets/images/picture1.jpg" data-caption="Cuadro al óleo, 90x40"><img
-              src="assets/images/picture1.jpg" alt=""></a>
-          <a href="assets/images/picture2.jpg" data-caption=""><img src="assets/images/picture2.jpg" alt=""></a>
-          <a href="assets/images/picture3.jpg"><img src="assets/images/picture3.jpg" alt=""></a>
-          <a href="assets/images/picture4.jpg" data-caption="Dibujo en carboncillo"><img
-              src="assets/images/picture4.jpg" alt=""></a>
-          <a href="assets/images/picture5.jpg" data-caption="Paisaje en acuarela"><img src="assets/images/picture5.jpg"
-              alt=""></a>
-          <a href="assets/images/picture6.jpg"><img src="assets/images/picture6.jpg" alt=""></a>
-          <a href="assets/images/picture7.jpg"><img src="assets/images/picture7.jpg" alt=""></a>
-          <a href="assets/images/picture8.jpg"><img src="assets/images/picture8.jpg" alt=""></a>
+      <div class="main-content">
+
+        <section class="about" id="about">
+          <h2>Sobre mi</h2>
+          <img src="assets/images/pintor.jpg" alt="pintor" class="about-image">
+
+          <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quaerat neque explicabo facere cum corrupti,
+            eaque
+            suscipit amet iure exercitationem incidunt ad culpa molestias temporibus possimus dolorum odit placeat
+            beatae
+            tempore.
+            Accusantium sapiente voluptatum dicta dolorum harum? Illum ab beatae officia quibusdam molestiae voluptatum!
+            Ducimus cumque, totam tenetur ipsam debitis, dolorum alias, sint blanditiis pariatur culpa deleniti voluptas
+            perspiciatis. Quam, asperiores?</p>
         </section>
-      </section>
-      </section>
-    </div>
-    <section class="contact" id="contact">
-      <h2>Contacto</h2>
-      <form action="" class="form-contact">
-        <label for="name">Nombre</label>
-        <input type="text" id="name">
-        <label for="email">Email</label>
-        <input type="email" id="email">
-        <label for="message">Mensaje</label>
-        <textarea name="message" id="message"></textarea>
-        <button type="submit">Enviar</button>
+        <section class="projects" id="projects">
+          <h2>Mis Obras</h2>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio incidunt voluptatibus ratione vero, quod
+            quidem
+            dolore nesciunt veritatis. Perferendis, incidunt cumque maiores ad dignissimos velit natus repellat sapiente
+            ipsam
+            libero?</p>
+          <p>(Toca la imagen para ver la galería.)</p>
+          <section class="gallery">
+            <a href="assets/images/picture1.jpg" data-caption="Cuadro al óleo, 90x40"><img
+                src="assets/images/picture1.jpg" alt=""></a>
+            <a href="assets/images/picture2.jpg" data-caption=""><img src="assets/images/picture2.jpg" alt=""></a>
+            <a href="assets/images/picture3.jpg"><img src="assets/images/picture3.jpg" alt=""></a>
+            <a href="assets/images/picture4.jpg" data-caption="Dibujo en carboncillo"><img
+                src="assets/images/picture4.jpg" alt=""></a>
+            <a href="assets/images/picture5.jpg" data-caption="Paisaje en acuarela"><img
+                src="assets/images/picture5.jpg" alt=""></a>
+            <a href="assets/images/picture6.jpg"><img src="assets/images/picture6.jpg" alt=""></a>
+            <a href="assets/images/picture7.jpg"><img src="assets/images/picture7.jpg" alt=""></a>
+            <a href="assets/images/picture8.jpg"><img src="assets/images/picture8.jpg" alt=""></a>
+          </section>
+        </section>
+        </section>
+      </div>
+      <section class="contact" id="contact">
+        <h2>Contacto</h2>
+        <form action="" class="form-contact">
+          <label for="name">Nombre</label>
+          <input type="text" id="name">
+          <label for="email">Email</label>
+          <input type="email" id="email">
+          <label for="message">Mensaje</label>
+          <textarea name="message" id="message"></textarea>
+          <button type="submit">Enviar</button>
 
-      </form>
+        </form>
 
-  </main>
+    </main>
 
 
-  <footer>
-    <p>Gregorio Peña &copy; 2025. Todos los derechos reservados.</p>
-    <p>Desarrollo Web: RamirezJM</p>
-  </footer>
+    <footer>
+      <p>Gregorio Peña &copy; 2025. Todos los derechos reservados.</p>
+      <p>Desarrollo Web: RamirezJM</p>
+    </footer>
   </div>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.12.0/baguetteBox.min.js"
     integrity="sha512-HzIuiABxntLbBS8ClRa7drXZI3cqvkAZ5DD0JCAkmRwUtykSGqzA9uItHivDhRUYnW3MMyY5xqk7qVUHOEMbMA=="

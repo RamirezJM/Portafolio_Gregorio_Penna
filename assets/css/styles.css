@@ -9,11 +9,27 @@
   box-sizing: border-box;
 }
 
+@font-face {
+  font-family: 'Libre Caslon Display';
+  src: url('../fonts/caslon.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Cormorant Garamond';
+  src: url('../fonts/cormo.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
 html {
   scroll-behavior: smooth;
 }
 :root{
   --color2: #1f1f1f;
+ 
 }
 body {
   /*  color: #333; */
@@ -21,7 +37,7 @@ body {
   /* Un gris oscuro para la tinta */
   text-shadow: 0.5px 0.5px 1px rgba(0, 0, 0, 0.2);
   /* Sombra sutil que simula la sangre de la tinta */
-  font-family: 'Libre Caslon Display', serif;
+  font-family: 'Cormorand Garam', serif;
   /* background-image:
     url('../images/grunge-beige10.png'),
     radial-gradient(ellipse at center,
@@ -35,6 +51,11 @@ body {
   background-color: #8b9cb0;
 
 }
+
+h1,h2, h3{
+  font-family: 'Libre Caslon Display', serif;
+}
+
 
 .wrapper {
   width: 90%;
@@ -93,22 +114,38 @@ body {
 
 header {
   display: flex;
-  flex-direction: column;
-  justify-content: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center; 
   align-items: center;
   padding: 1em;
 
 }
+ .main-title{
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+ /*  place-content: center; */
+  place-items: center;
+  padding: 1em;
+ }
+
+
+.logo{
+  width: clamp(60px, 11.5vw, 100px);
+  grid-column: 1/2;
+}
 
 h1 {
-  text-align: center;
+  /* text-align: center; */
   display: flex;
   flex-direction: column;
   color: var(--color2);
+  grid-column: 2/3;
 }
 
 .name {
-  font-size: 5rem;
+  /* font-size: clamp(3rem, 9vw, 5rem); */
+  font-size: 4rem;
   text-align: center;
   font-weight: 300;
 }
@@ -130,6 +167,7 @@ header>p {
 .current-date {
   order: -1;
   font-size: 1rem;
+  grid-column: 2/3;
 }
 
 a {
@@ -359,7 +397,36 @@ footer {
 
   header {
     justify-content: center;
+   
   }
+
+  .main-title{
+   grid-template-columns: repeat(4, 1fr);
+   gap: 1em;
+   justify-content: space-between;
+   
+  }
+
+  .logo{
+    grid-column: 1/2;
+   
+  }
+  h1{
+    grid-column: span 2;
+  }
+
+  .current-date{
+    grid-column: 4/5;
+    grid-row: 1/1;
+     font-size: 1.3rem;
+    background-color: #4a4a4a;
+    color: #ffffff;
+    width: min-content;
+    padding: .5em;
+    border-radius: 2px;
+    text-align: center;
+  }
+
 
   .hamburger-menu {
     display: none;
@@ -416,6 +483,9 @@ footer {
 
   .wrapper{
     width: 80%;
+  }
+  .main-title{
+    gap: 4em;
   }
   .main-content {
     grid-template-columns: repeat(3, 1fr);
