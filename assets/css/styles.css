@@ -29,6 +29,8 @@ html {
 }
 :root{
   --color2: #1f1f1f;
+  --font-headings: 'Libre Caslon Display', serif;
+  --font-body: 'Cormorant Garamond', serif;
  
 }
 body {
@@ -37,7 +39,7 @@ body {
   /* Un gris oscuro para la tinta */
   text-shadow: 0.5px 0.5px 1px rgba(0, 0, 0, 0.2);
   /* Sombra sutil que simula la sangre de la tinta */
-  font-family: 'Cormorand Garam', serif;
+  font-family: var(--font-body);
   /* background-image:
     url('../images/grunge-beige10.png'),
     radial-gradient(ellipse at center,
@@ -53,9 +55,24 @@ body {
 }
 
 h1,h2, h3{
-  font-family: 'Libre Caslon Display', serif;
+  font-family: var(--font-headings);
+}
+p{
+  font-size: 1.1rem;
+  font-weight: 500;
 }
 
+p.info-text::first-letter{
+  font-family: (var(--font-headings));
+  font-size: 2rem;
+  hyphens: auto;
+  hyphenate-limit-chars: 6 3 2;
+  text-align: justify;
+}
+
+img{
+  filter: sepia(.1) contrast(1.1) brightness(.9);
+}
 
 .wrapper {
   width: 90%;
@@ -66,9 +83,13 @@ h1,h2, h3{
     url('../images/grunge-beige10.png'),
   /*   radial-gradient(ellipse at center, #fdfbf2 0%, #F9d48b 100%); */
     radial-gradient(ellipse at center,
-    #ffffff 0%,   /* centro claro */
-    #eee8da 60%,  /* transición suave */
-    #f8f6f2 100%  /* bordes oscurecidos */
+   /*  #ffffff 0%,   
+    #eee8da 60%,  
+    #f8f6f2 100%  */
+    #ffffff 0%,
+    #f9f6f1 60%,
+    #eee8da 80%,
+    #d2c6b4 100%
   );
   background-position:
    /*  5px 1px, */
@@ -131,7 +152,7 @@ header {
 
 
 .logo{
-  width: clamp(60px, 11.5vw, 100px);
+  width: clamp(50px, 11.5vw, 90px);
   grid-column: 1/2;
 }
 
@@ -148,6 +169,7 @@ h1 {
   font-size: 4rem;
   text-align: center;
   font-weight: 300;
+  
 }
 
 .career {
@@ -160,6 +182,9 @@ h2 {
   text-align: center;
 }
 
+h3{
+  font-size: 1.6rem;
+}
 header>p {
   font-size: 1.5rem;
 }
@@ -227,7 +252,6 @@ nav {
   max-height: 0;
   opacity: 0;
   visibility: hidden;
-  /* transition: opacity .3s ease-out, max-height .3s ease-out, visibility .3s; */
   border-top: solid 1px #4a4a4a;
   border-bottom: solid 1px #4a4a4a;
   padding: .5em;
@@ -325,11 +349,21 @@ nav {
   flex-direction: column;
   align-items: center;
   gap: 1em;
+ 
 
 }
-
+ 
 .gallery {
-  display: grid;
+ display: flex;
+ flex-direction: column;
+  gap: 2em;
+} 
+
+.gallery h3{
+  text-align: center;
+}
+.subgallery{
+   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
   gap: 1em;
   /* grid-auto-rows: auto; */
@@ -352,6 +386,10 @@ nav {
 }
 
 /*******  contact  ****/
+
+.contact{
+   border-top: #4a4a4a solid 1px;
+}
 
 .form-contact {
   display: flex;
@@ -419,7 +457,7 @@ footer {
     grid-column: 4/5;
     grid-row: 1/1;
      font-size: 1.3rem;
-    background-color: #4a4a4a;
+    background: linear-gradient(to right, var(--color2), #333);
     color: #ffffff;
     width: min-content;
     padding: .5em;
@@ -442,6 +480,7 @@ footer {
   .list-links {
     flex-direction: row;
     justify-content: space-around;
+    align-items: center;
     /* gap: 4em; */
   }
 
@@ -453,29 +492,15 @@ footer {
     position: absolute;
     content: "|";
     background-color: #4a4a4a;
-    left: 15vw;
-    width: 1.5px;
+    left: clamp(7.5rem, 17vw ,13rem);
+    width: 2px;
+    top: -2px;
     height: 30px;
   }
 
   .list-links li:last-child::after {
     content: none;
   }
-
- /*  h1 {
-    order: -1;
-  }
- */
-/*   .current-date {
-    align-self: flex-end;
-    font-size: 1.3rem;
-    background-color: #4a4a4a;
-    color: #ffffff;
-    width: min-content;
-    padding: .2em;
-    border-radius: 2px;
-  } */
-
 }
 
 
@@ -489,16 +514,19 @@ footer {
   }
   .main-content {
     grid-template-columns: repeat(3, 1fr);
+    grid-auto-flow: dense;
 
   }
 
   .projects {
     grid-column: 1/3;
-    grid-row: 1/2;
+    
+
   }
 
   .about {
     grid-column: 3/4;
+    
     border-left: #4a4a4a solid 1px;
     border-bottom: 0;
   }
