@@ -1,2 +1,2 @@
-# Portafolio_Gregorio_Pe-a
+# Portafolio_Gregorio_Peña
 Portafolio de obras de Gregorio Peña
