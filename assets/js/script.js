@@ -1,3 +1,6 @@
+
+/*======== MENU TOGGLE =======*/
+
 const menuButton = document.querySelector('.hamburger-menu')
 const navMenu = document.querySelector('nav')
 
@@ -7,6 +10,7 @@ menuButton.addEventListener('click', () => {
   navMenu.classList.toggle('active')
 })
 
+/*======== LIGHTBOX =======*/
 
 window.addEventListener('load', () => { 
   baguetteBox.run('.gallery', {
@@ -14,28 +18,25 @@ window.addEventListener('load', () => {
   })
 });
 
-
+/*======== SLIDER =======*/
 
 const swiper = new Swiper('.swiper', {
-  // Optional parameters
   direction: 'horizontal',
   loop: true,
-
-  // If we need pagination
   pagination: {
     el: '.swiper-pagination',
   },
-
   autoplay: {
-    delay: 5000,
+    delay: 10000,
   },
-  // Navigation arrows
   navigation: {
     nextEl: '.swiper-button-next',
     prevEl: '.swiper-button-prev',
   },
-
 });
+
+
+/*======== CURRENT DATE =======*/
 
 const calendar = document.getElementById('calendar')
 
@@ -45,7 +46,6 @@ const options = {
   month: 'long'
 }
 const nuevafecha = fecha.toLocaleDateString('es-CL', options)
-
 
 const anno = fecha.getFullYear()
 const month = (fecha.getMonth()+1).toString().padStart(2, '0')
